@@ -1,0 +1,24 @@
+.ul_list_task {
+  list-style: none;
+}
+
+.ui_list_task_li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid #a855f7;
+  margin-bottom: .2em;
+}
+
+.ui_list_task_li:hover {
+  border-color: #c026d3;
+}
+
+.ui_list_task_li_div{
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
