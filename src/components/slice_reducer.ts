@@ -5,7 +5,7 @@ interface Task {
   "userId": number,
   "id": number,
   "title": string,
-  "completed": false
+  "completed": boolean
 }
 
 const enum Theme {
@@ -16,12 +16,14 @@ const enum Theme {
 interface TemplateStore {
   tasks: Task[],
   id_task: number,
+  edit_id: null | number
   theme: Theme 
 }
 
 const initialState: TemplateStore = {
   tasks: [],
   id_task: 0,
+  edit_id:null,
   theme: Theme.Dark
 }
 
@@ -33,10 +35,25 @@ export const tasks_theme_reduser = createSlice({
     changeTheme(state) {
       state.theme = state.theme === Theme.Dark ?
       Theme.Light
-      : Theme.Dark
+      : Theme.Dark;
     },
     inrementId(state) {
       state.id_task += 1
+    },
+    completedTask(state, id) {
+      state.tasks = state.tasks.map( item => {
+        if(item.id === id.payload){
+          item.completed = !item.completed
+        }
+        return item
+      })
+      return state
+    },
+    deleteTask(state, id) {
+      state.tasks = state.tasks.filter( item => item.id !== id.payload)
+    },
+    editID(state, id) {
+      state.edit_id = id.payload
     }
   },
   extraReducers: (builder) => {
@@ -65,5 +82,7 @@ export const fetchTaskId = createAsyncThunk(
   }
 )
 
-export const {changeTheme, inrementId} = tasks_theme_reduser.actions
+
+
+export const {changeTheme, inrementId, completedTask, deleteTask, editID} = tasks_theme_reduser.actions
 export default tasks_theme_reduser.reducer

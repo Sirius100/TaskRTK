@@ -6,19 +6,25 @@ import Checkbox from '../btn_manager_task/complite'
 import s from './style.module.css'
 
 export default function() {
-  const list_task = useSelector((state: RootState) => state.list_task.tasks)
+  const {tasks, edit_id} = useSelector((state: RootState) => state.list_task)
+   
 
+  let style_completed_false = `${s.ui_list_task_li}`
+  let style_completed_true = `${s.ui_list_task_li} ${s.ui_list_task_li_completed}`
   return (
     <ul className={s.ul_list_task}>
-      {list_task.map( item => {
+      {tasks.map( item => {
         return (
-          <li key={item.id} className={s.ui_list_task_li}>
-            <p>
+          <li key={item.id} className={ item.completed ? style_completed_true : style_completed_false}>
+            <span className={s.ui_list_task_li_span_id}>
+              {item.id}
+            </span>
+            <p className={s.ui_list_task_li_p}>
               {item.title}
             </p>
             <div className={s.ui_list_task_li_div}>
-              <BtnEdit key={item.id}/>
-              <Checkbox/>
+              <BtnEdit id={item.id}/>
+              <Checkbox id={item.id} task_ready={item.completed}/>
             </div>
 
           </li>
