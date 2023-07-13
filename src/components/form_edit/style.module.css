@@ -1,3 +1,5 @@
+@import url(../../globalStyle/global_style.css);
+
 .form_edit {
   display: flex;
   width: 100%;
@@ -14,7 +16,7 @@
 .form_edit_btn {
   height: 2em;
   line-height: .8em;
-  border: 1px solid #9F1239;
+  border: 1px solid var(--border-btn);
   border-radius: 0;
   padding: 0 1.5em;
 

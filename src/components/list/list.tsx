@@ -9,7 +9,6 @@ import s from './style.module.css'
 export default function() {
   const {tasks, edit_id} = useSelector((state: RootState) => state.list_task)
    
-
   let style_completed_false = `${s.ui_list_task_li}`
   let style_completed_true = `${s.ui_list_task_li} ${s.ui_list_task_li_completed}`
   return (

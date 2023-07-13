@@ -1,6 +1,8 @@
+@import url(../../globalStyle/global_style.css);
+
 .btn_get_task {
   position: fixed;
   bottom: 1em;
-  border: 1px solid #9F1239;
+  border: 1px solid var(--border-btn);
   margin: auto;
 }

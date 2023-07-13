@@ -56,8 +56,7 @@ export const tasks_theme_reduser = createSlice({
       state.edit_id = id.payload
     },
     newTask(state, new_task) {
-      console.log(new_task);
-      
+      if(!new_task.payload.valueInp) return
       state.tasks = state.tasks.map(
         item => {
           if(item.id === new_task.payload.edit_id){
