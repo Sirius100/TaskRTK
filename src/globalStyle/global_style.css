@@ -1,0 +1,33 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Dark */
+
+  --background: #242424;
+  --background-btn: #1a1a1a;
+  --background-span: #44403c;
+
+  --border-btn: #9F1239;
+  --border-btn-hover: #646cff;
+  --border-btn-focus: #2dd4bf;
+
+  --border-li: #a855f7;
+  --border-li-hover: #c026d3;
+  --border-li-completed: #475569;
+  --border-li-completed-hover: #c026d3;
+
+
+
+}

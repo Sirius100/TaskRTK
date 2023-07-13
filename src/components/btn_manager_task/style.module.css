@@ -1,0 +1,28 @@
+@import url(../../globalStyle/global_style.css);
+
+.btn_edit {
+  padding: 0;
+  font-size: 1em;
+  width: 2em;
+  height: 1.5em;
+  background-color: transparent;
+  border: 1px solid var(--border-btn);
+}
+btn_edit:hover{
+  border-color: var(--border-btn-hover);
+}
+
+.checkbox_complited {
+  cursor: pointer;
+  margin-left: .5em;
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.span_delete {
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.3em;
+}

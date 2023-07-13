@@ -1,0 +1,50 @@
+@import url(../../globalStyle/global_style.css);
+
+.ul_list_task {
+  list-style: none;
+  padding: 0;
+}
+
+.ui_list_task_li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid var(--border-li);
+  margin-bottom: .2em;
+  cursor: pointer;
+}
+
+.ui_list_task_li:hover {
+  border-color: var(--border-li-hover);
+}
+
+.ui_list_task_li_completed {
+  background-color: var(--border-li-completed);
+}
+
+.ui_list_task_li_completed:hover {
+  border-color: var(--border-li-completed-hover);
+}
+
+.ui_list_task_li_span_id{
+  width: 1.2em;
+  height: 1.1em;
+  line-height: 1.1em;
+  border-radius: 50px;
+  padding: .3em .3em;
+  text-align: center;
+  background-color: var(--background-span)
+}
+
+.ui_list_task_li_p {
+  padding: 0 .5em;
+}
+
+.ui_list_task_li_div{
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

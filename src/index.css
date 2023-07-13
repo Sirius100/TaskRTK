@@ -1,0 +1,31 @@
+
+@import url(./globalStyle/global_style.css);
+#root {
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background-btn);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--border-btn-hover);
+}
+button:focus {
+  border-color: var(--border-btn-focus);
+}
+
+
+

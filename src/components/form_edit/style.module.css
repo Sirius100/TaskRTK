@@ -1,0 +1,23 @@
+@import url(../../globalStyle/global_style.css);
+
+.form_edit {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form_edit_input {
+  flex-grow: 1;
+  height: 2em;
+  border: 1px solid #a855f7;
+}
+.form_edit_btn {
+  height: 2em;
+  line-height: .8em;
+  border: 1px solid var(--border-btn);
+  border-radius: 0;
+  padding: 0 1.5em;
+
+}
