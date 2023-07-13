@@ -54,7 +54,21 @@ export const tasks_theme_reduser = createSlice({
     },
     editID(state, id) {
       state.edit_id = id.payload
-    }
+    },
+    newTask(state, new_task) {
+      console.log(new_task);
+      
+      state.tasks = state.tasks.map(
+        item => {
+          if(item.id === new_task.payload.edit_id){
+            item.title = new_task.payload.valueInp
+          }
+          return item
+        }
+      )
+      return state
+    },
+    
   },
   extraReducers: (builder) => {
     builder
@@ -84,5 +98,12 @@ export const fetchTaskId = createAsyncThunk(
 
 
 
-export const {changeTheme, inrementId, completedTask, deleteTask, editID} = tasks_theme_reduser.actions
+export const {
+  changeTheme,
+  inrementId,
+  completedTask,
+  deleteTask,
+  editID,
+  newTask,
+} = tasks_theme_reduser.actions
 export default tasks_theme_reduser.reducer

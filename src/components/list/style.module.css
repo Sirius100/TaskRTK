@@ -1,5 +1,6 @@
 .ul_list_task {
   list-style: none;
+  padding: 0;
 }
 
 .ui_list_task_li {
@@ -17,7 +18,7 @@
 }
 
 .ui_list_task_li_completed {
-  background-color: #f59e0b;
+  background-color: #475569;
 }
 
 .ui_list_task_li_completed:hover {
@@ -25,11 +26,12 @@
 }
 
 .ui_list_task_li_span_id{
-  width: 1.1em;
+  width: 1.2em;
   height: 1.1em;
   line-height: 1.1em;
   border-radius: 50px;
   padding: .3em .3em;
+  text-align: center;
   background-color: #44403c
 }
 
